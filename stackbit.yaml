@@ -1,0 +1,193 @@
+stackbitVersion: ~0.3.0
+dataDir: exampleSite
+models:
+  config:
+    type: data
+    label: Config
+    file: config.yml
+    fields:
+      - type: string
+        name: baseurl
+        label: Baseurl
+      - type: string
+        name: title
+        label: Title
+      - type: boolean
+        name: canonifyurls
+        label: Canonifyurls
+      - type: string
+        name: theme
+        label: Theme
+      - type: string
+        name: GoogleAnalytics
+        label: Google Analytics
+      - type: object
+        name: params
+        label: Params
+        fields:
+          - type: string
+            name: Name
+            label: Name
+          - type: string
+            name: Description
+            label: Description
+          - type: string
+            name: Date
+            label: Date
+          - type: string
+            name: Price
+            label: Price
+          - type: string
+            name: Venue
+            label: Venue
+          - type: string
+            name: Address
+            label: Address
+          - type: string
+            name: City
+            label: City
+          - type: string
+            name: State
+            label: State
+          - type: list
+            name: Images
+            label: Images
+            items:
+              type: image
+          - type: string
+            name: GoogleMapsKey
+            label: Google Maps Key
+          - type: list
+            name: Sections
+            label: Sections
+            items:
+              type: string
+          - type: object
+            name: Titles
+            label: Titles
+            fields:
+              - type: string
+                name: about
+                label: About
+              - type: string
+                name: location
+                label: Location
+              - type: string
+                name: speakers
+                label: Speakers
+              - type: string
+                name: schedule
+                label: Schedule
+              - type: string
+                name: sponsors
+                label: Sponsors
+              - type: string
+                name: partners
+                label: Partners
+              - type: string
+                name: contact
+                label: Contact
+          - type: object
+            name: CallToAction
+            label: Call To Action
+            fields:
+              - type: string
+                name: text
+                label: Text
+              - type: string
+                name: link
+                label: Link
+          - type: object
+            name: ForkButton
+            label: Fork Button
+            fields:
+              - type: string
+                name: repository
+                label: Repository
+          - type: list
+            name: Sponsors
+            label: Sponsors
+            items:
+              type: object
+              fields:
+                - type: string
+                  name: name
+                  label: Name
+                - type: image
+                  name: logo
+                  label: Logo
+                - type: string
+                  name: url
+                  label: Url
+          - type: list
+            name: Partners
+            label: Partners
+            items:
+              type: object
+              fields:
+                - type: string
+                  name: name
+                  label: Name
+                - type: image
+                  name: logo
+                  label: Logo
+                - type: string
+                  name: url
+                  label: Url
+          - type: list
+            name: Schedule
+            label: Schedule
+            items:
+              type: model
+              models:
+                - object_9sukrwzmf8
+                - object_kdzm3x080d
+  object_9sukrwzmf8:
+    type: object
+    label: Object 1
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: image
+        name: photo
+        label: Photo
+      - type: string
+        name: bio
+        label: Bio
+      - type: string
+        name: company
+        label: Company
+      - type: object
+        name: link
+        label: Link
+        fields:
+          - type: string
+            name: href
+            label: Href
+          - type: string
+            name: text
+            label: Text
+      - type: object
+        name: presentation
+        label: Presentation
+        fields:
+          - type: string
+            name: title
+            label: Title
+          - type: string
+            name: description
+            label: Description
+          - type: string
+            name: time
+            label: Time
+  object_kdzm3x080d:
+    type: object
+    label: Object 2
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: time
+        label: Time
